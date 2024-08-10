@@ -10,7 +10,7 @@ class Solution:
 
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         min_speed = 1
-        max_speed = sum(piles)
+        max_speed = max(piles)
         while min_speed<=max_speed:
             speed = (min_speed+max_speed)//2
             if self.canBeEat(speed, piles, h) and self.canBeEat(speed - 1, piles, h):
